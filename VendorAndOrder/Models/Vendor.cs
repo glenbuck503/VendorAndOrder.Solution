@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace VendorAndOrder.Models
 {
@@ -8,16 +9,15 @@ namespace VendorAndOrder.Models
     public string Name { get; set;}
     public string Description { get; set;}
     public int Id { get;}
-    public List<Vendor> Vendors { get; set;}
+    public List<Order> Orders { get; set;}
 
     public Vendor(string vendorName, string vendorDescription)
     {
       Name = vendorName;
       Description = vendorDescription;
-
       _instances.Add(this);
       Id = _instances.Count;
-      Vendors = new List<Vendor>{};
+      Orders = new List<Order>{};
     }
 
     public static void ClearAll()
@@ -35,9 +35,9 @@ namespace VendorAndOrder.Models
       return _instances[searchId-1];
     }
 
-    public void AddItem(Vendor vendor)
+    public void AddOrder(Order order)
     {
-      Vendors.Add(vendor);
+      Orders.Add(order);
     }
 
 

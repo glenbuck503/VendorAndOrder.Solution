@@ -44,6 +44,18 @@ namespace VendorAndOrder.Tests
 
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsPrice_String()
+    {
+
+      string price = "price";
+      Order newOrder = new Order( "sdfsd","dsfsdd",price, "sdfsd");
+
+      string result = newOrder.Description;
+
+      Assert.AreEqual(price, result);
+    }
   }
 }
 

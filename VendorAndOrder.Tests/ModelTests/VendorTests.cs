@@ -55,6 +55,23 @@ namespace ToDoList.Tests
 
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      //Arrange
+      string vendor1 = "Work";
+      string vendor2 = "School";
+      Vendor newVendor1 = new Vendor(vendor1, "sdfsd");
+      Vendor newVendor2 = new Vendor(vendor2, "sdfsds");
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+
+      //Act
+      List<Vendor> result = Vendor.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
     
 
   }

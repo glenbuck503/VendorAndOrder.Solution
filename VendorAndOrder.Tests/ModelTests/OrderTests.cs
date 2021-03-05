@@ -28,7 +28,7 @@ namespace VendorAndOrder.Tests
       string orderName = "First Order";
       Order newOrder = new Order(orderName, "sdfsd", "dsfsdd", "sdfsd");
 
-      string result = newOrder.Description;
+      string result = newOrder.OrderName;
 
       Assert.AreEqual(orderName, result);
     }

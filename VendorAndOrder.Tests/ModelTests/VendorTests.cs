@@ -30,7 +30,18 @@ namespace ToDoList.Tests
       string result = newVendor.Name;
 
       Assert.AreEqual(name, result);
+    }
 
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string description = "Description";
+  
+      Vendor newVendor = new Vendor("sdfsdds", description);
+      
+      string result = newVendor.Name;
+
+      Assert.AreEqual(description, result);
     }
 
   }

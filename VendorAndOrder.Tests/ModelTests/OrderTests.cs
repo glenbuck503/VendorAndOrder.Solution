@@ -22,7 +22,7 @@ namespace VendorAndOrder.Tests
     }
 
     [TestMethod]
-    public void GetOrderName_ReturnsDescription_String()
+    public void GetOrderName_ReturnsOrderName_String()
     {
 
       string orderName = "First Order";
@@ -31,6 +31,18 @@ namespace VendorAndOrder.Tests
       string result = newOrder.OrderName;
 
       Assert.AreEqual(orderName, result);
+    }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+
+      string description = "description";
+      Order newOrder = new Order( "sdfsd", description, "dsfsdd", "sdfsd");
+
+      string result = newOrder.Description;
+
+      Assert.AreEqual(description, result);
     }
   }
 }

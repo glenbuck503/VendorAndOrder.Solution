@@ -3,7 +3,7 @@ using VendorAndOrder.Models;
 using System.Collections.Generic;
 using System;
 
-namespace ToDoList.Tests
+namespace VendorandOrder.Tests
 {
   [TestClass]
   public class CategoryTests : IDisposable
@@ -59,35 +59,44 @@ namespace ToDoList.Tests
     [TestMethod]
     public void GetAll_ReturnsAllVendorObjects_VendorList()
     {
-      //Arrange
       string vendor1 = "Vendor1";
       string vendor2 = "Vendor2";
       Vendor newVendor1 = new Vendor(vendor1, "sdfsd");
       Vendor newVendor2 = new Vendor(vendor2, "sdfsds");
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
-      //Act
       List<Vendor> result = Vendor.GetAll();
 
-      //Assert
       CollectionAssert.AreEqual(newList, result);
     }
 
     [TestMethod]
     public void Find_ReturnsVendor_Vendor()
     {
-      //Arrange
       string vendor1 = "Vendor1";
       string vendor2 = "Vendor2";
       Vendor newVendor1 = new Vendor(vendor1, "sdfsd");
       Vendor newVendor2 = new Vendor(vendor2, "sdfsd");
 
-      //Act
       Vendor result = Vendor.Find(1);
 
-      //Assert
       Assert.AreEqual(newVendor1, result);
     }
+
+    [TestMethod]
+  public void AddVendor_AssociatesOrderwithVendor_OrderList()
+  {
+    string description = "dsfsd";
+    Order newOrder = new Order(description, "sdfsdfsd", "sfgsfg", "sdfsd");
+    List<Order> newList = new List<Order> { newOrder };
+    string name = "dsfdfsd";
+    Vendor newVendor = new Vendor(name, "dsfsd");
+    newVendor.AddOrder(newOrder);
+
+    List<Order> result = newVendor.Orders;
+
+    CollectionAssert.AreEqual(newList, result);
+  }
     
 
   }

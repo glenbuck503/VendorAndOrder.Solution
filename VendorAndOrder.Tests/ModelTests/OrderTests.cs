@@ -6,7 +6,7 @@ using System;
 namespace VendorAndOrder.Tests
 {
   [TestClass]
-  public class ItemTests : IDisposable
+  public class OrderTests : IDisposable
   {
 
     public void Dispose()

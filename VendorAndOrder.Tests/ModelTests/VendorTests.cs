@@ -83,10 +83,10 @@ namespace ToDoList.Tests
       Vendor newVendor2 = new Vendor(vendor2, "232");
 
       //Act
-      Vendor result = Vendor.Find(3);
+      Vendor result = Vendor.Find(1);
 
       //Assert
-      Assert.AreEqual(newVendor2, result);
+      Assert.AreEqual(newVendor1, result);
     }
     
 

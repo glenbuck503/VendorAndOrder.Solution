@@ -13,6 +13,14 @@ namespace VendorAndOrder.Controllers
       return View(vendor);
     }
 
+    [HttpPost("/orders/delete")]
+    public ActionResult DeleteAll()
+    {
+      Order.ClearAll();
+      return View();
+    }
+
+
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
@@ -23,16 +31,5 @@ namespace VendorAndOrder.Controllers
       model.Add("vendor", vendor);
       return View(model);
     }
-
-    [HttpPost("/orders/delete")]
-    public ActionResult DeleteAll()
-    {
-      Order.ClearAll();
-      return View();
-    }
-
-
-
-
   }
 }

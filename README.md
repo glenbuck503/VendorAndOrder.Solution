@@ -12,9 +12,8 @@
 #### By Glen Buck
 
 ## Description
+This application will let users add vendors to a list and then be able to add orders to the seleted vendor. Users will also be able to delete both orders and vendors.
 
-
-  
 ## Setup/Installation Requirements
 
 - Go to https://github.com/glenbuck503/VendorAndOrder.Solution

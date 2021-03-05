@@ -53,7 +53,7 @@ namespace ToDoList.Tests
 
       int result = newVendor.Id;
 
-      Assert.AreEqual(3, result);
+      Assert.AreEqual(1, result);
     }
     
 

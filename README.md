@@ -1,4 +1,4 @@
-# Pierre's Bakery Shop
+# Vendor and Order Tracker
 
 <div align="center">
 <img src="https://github.com/glenbuck503.png" width="200px" height="auto" >

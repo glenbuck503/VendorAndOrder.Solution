@@ -35,9 +35,9 @@ namespace VendorAndOrder.Models
       return _instances[searchId-1];
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Vendor vendor)
     {
-      Items.Add(item);
+      Vendors.Add(vendor);
     }
 
 

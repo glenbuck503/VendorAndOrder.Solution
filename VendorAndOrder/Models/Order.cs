@@ -34,7 +34,10 @@ namespace VendorAndOrder.Models
       return _instances;
     }
 
-    //15 minute break
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
 
 
   }

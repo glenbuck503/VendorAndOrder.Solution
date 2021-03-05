@@ -70,7 +70,7 @@ namespace VendorAndOrder.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsItems_ItemList()
+    public void GetAll_ReturnsOrders_OrdersList()
     {
       string orderName = "Order";
       string description = "snowboards";
@@ -85,6 +85,17 @@ namespace VendorAndOrder.Tests
       List<Order> result = Order.GetAll();
 
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetId_OrderInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string orderName = "Order";
+      Order newOrder = new Order(orderName,"sdfdsf","sfsdfd","sdfsdfsd");
+
+      int result = newOrder.Id;
+    
+      Assert.AreEqual(3, result);
     }
   }
 }

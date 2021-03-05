@@ -64,7 +64,7 @@ namespace VendorAndOrder.Tests
       string date = "date";
       Order newOrder = new Order( "sdfsd","dsfsdd", "sdfsd", date);
 
-      string result = newOrder.Price;
+      string result = newOrder.Date;
 
       Assert.AreEqual(date, result);
     }

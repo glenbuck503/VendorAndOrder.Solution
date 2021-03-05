@@ -68,6 +68,24 @@ namespace VendorAndOrder.Tests
 
       Assert.AreEqual(date, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsItems_ItemList()
+    {
+      string orderName = "Order";
+      string description = "snowboards";
+      string price = "1k";
+      string date = "3/5/2021";
+      Order order1 = new Order(orderName, "sdfsdf", "sdfsdf", "sdfsdf");
+      Order order2 = new Order("sdfd",description, "dsfsdf", "sdfsdf");
+      Order order3 = new Order("dfsd","dsfs",price, "dsfsdfsd");
+      Order order4 = new Order("sdfdf","sdfsdfds","sdfsdf",date);
+      List<Order> newList = new List<Order> { order1, order2, order3 };
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
 

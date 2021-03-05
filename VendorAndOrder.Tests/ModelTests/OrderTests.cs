@@ -80,7 +80,7 @@ namespace VendorAndOrder.Tests
       Order order2 = new Order("sdfd",description, "dsfsdf", "sdfsdf");
       Order order3 = new Order("dfsd","dsfs",price, "dsfsdfsd");
       Order order4 = new Order("sdfdf","sdfsdfds","sdfsdf",date);
-      List<Order> newList = new List<Order> { order1, order2, order3 };
+      List<Order> newList = new List<Order> { order1, order2, order3, order4};
 
       List<Order> result = Order.GetAll();
 

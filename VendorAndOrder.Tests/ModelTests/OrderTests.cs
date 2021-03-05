@@ -52,7 +52,7 @@ namespace VendorAndOrder.Tests
       string price = "price";
       Order newOrder = new Order( "sdfsd","dsfsdd",price, "sdfsd");
 
-      string result = newOrder.Description;
+      string result = newOrder.Price;
 
       Assert.AreEqual(price, result);
     }

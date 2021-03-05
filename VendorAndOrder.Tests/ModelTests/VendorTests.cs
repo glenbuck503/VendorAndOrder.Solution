@@ -74,13 +74,13 @@ namespace ToDoList.Tests
     }
 
     [TestMethod]
-    public void Find_ReturnsCorrectCategory_Category()
+    public void Find_ReturnsVendor_Vendor()
     {
       //Arrange
       string vendor1 = "Vendor1";
       string vendor2 = "Vendor2";
       Vendor newVendor1 = new Vendor(vendor1, "sdfsd");
-      Vendor newVendor2 = new Vendor(vendor2, "232");
+      Vendor newVendor2 = new Vendor(vendor2, "sdfsd");
 
       //Act
       Vendor result = Vendor.Find(1);

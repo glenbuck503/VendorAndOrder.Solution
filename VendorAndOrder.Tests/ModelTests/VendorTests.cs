@@ -39,7 +39,7 @@ namespace ToDoList.Tests
   
       Vendor newVendor = new Vendor("sdfsdds", description);
       
-      string result = newVendor.Name;
+      string result = newVendor.Description;
 
       Assert.AreEqual(description, result);
     }

@@ -20,6 +20,18 @@ namespace VendorAndOrder.Tests
       Order newOrder = new Order("test", "test2", "test3", "test4");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetOrderName_ReturnsDescription_String()
+    {
+
+      string orderName = "First Order";
+      Order newOrder = new Order(orderName, "sdfsd", "dsfsdd", "sdfsd");
+
+      string result = newOrder.Description;
+
+      Assert.AreEqual(orderName, result);
+    }
   }
 }
 

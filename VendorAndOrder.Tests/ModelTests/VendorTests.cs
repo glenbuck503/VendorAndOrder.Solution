@@ -43,7 +43,19 @@ namespace ToDoList.Tests
 
       Assert.AreEqual(description, result);
     }
-    //
+
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+    
+      string name = "Test Vendor";
+      Vendor newVendor = new Vendor(name, "fsdds");
+
+      int result = newVendor.Id;
+
+      Assert.AreEqual(3, result);
+    }
+    
 
   }
 }

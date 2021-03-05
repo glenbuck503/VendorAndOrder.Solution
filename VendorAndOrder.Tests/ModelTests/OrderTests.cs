@@ -95,7 +95,7 @@ namespace VendorAndOrder.Tests
 
       int result = newOrder.Id;
     
-      Assert.AreEqual(3, result);
+      Assert.AreEqual(1, result);
     }
   }
 }

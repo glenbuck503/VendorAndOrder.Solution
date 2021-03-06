@@ -6,3 +6,11 @@ body {
 h1 {
   color: white;
 }
+
+a.links {
+  color: white;
+}
+
+a.vendor {
+  color: green;
+}

@@ -20,9 +20,9 @@ namespace VendorAndOrder.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create(string vendorName) // put back description
+    public ActionResult Create(string vendorName, string vendorDescription) 
     {
-      Vendor newVendor = new Vendor(vendorName,"sdfsd");
+      Vendor newVendor = new Vendor(vendorName,vendorDescription);
       return RedirectToAction("Index");
     }
 

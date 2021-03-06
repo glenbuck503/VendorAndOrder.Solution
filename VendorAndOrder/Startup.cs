@@ -27,17 +27,16 @@ public void ConfigureServices(IServiceCollection services)
     {
         app.UseDeveloperExceptionPage();
         app.UseRouting();
+        app.UseStaticFiles();
 
         app.UseEndpoints(routes =>
         {
-        routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
         });
 
-        app.UseStaticFiles();
-        
         app.Run(async (context) =>
         {
-        await context.Response.WriteAsync("There was an error");
+            await context.Response.WriteAsync("Hello World!");
         });
     }
   }

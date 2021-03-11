@@ -38,10 +38,10 @@ For contact support, please email Glen Buck <a href = "mailto: glenbuck@gamil.co
 
 - VS Code
 - Git
-- .NET Core
 - MS Tests
 - MS Build
 - CSS
+- ASP.NET MVC
 
 
 ### License

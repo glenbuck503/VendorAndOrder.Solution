@@ -4,16 +4,17 @@
   Layout = "_Layout";
 }
 
-<h3>Here are all the orders this vendor:</h3>
+<h3>Here are all the orders for this vendor:</h3>
 
 
 @foreach (Order order in @Model["order"])
 {
   <p><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderName</a></p>
+  <p>-------------------------</p>
   
   
 }
 
-<p><a class="links" href='/vendors/@Model["vendor"].Id/orders/new'>Add new order to this vendor</a></p>
+<p><a class="links" href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order to this vendor</a></p>
 <p><a class="links" href='/vendors'>Return to Vendor list</a></p>
-<p><a class="links" href='/'>Return to Main Page</a></p>
+<p><a class="links" href='/'>Return to Home Page</a></p>

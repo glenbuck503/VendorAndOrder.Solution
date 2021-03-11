@@ -84,7 +84,7 @@ namespace VendorandOrder.Tests
     }
 
     [TestMethod]
-  public void AddVendor_AssociatesOrderwithVendor_OrderList()
+  public void AddOrder_AssociatesOrderwithVendor_OrderList()
   {
     string description = "dsfsd";
     Order newOrder = new Order(description, "sdfsdfsd", "sfgsfg", "sdfsd");

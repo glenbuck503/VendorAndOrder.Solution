@@ -42,6 +42,9 @@ For contact support, please email Glen Buck <a href = "mailto: glenbuck@gamil.co
 - MS Build
 - CSS
 - ASP.NET MVC
+- .NET 5
+- C# 9
+
 
 
 ### License
